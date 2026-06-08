@@ -1,0 +1,55 @@
+% !TEX program = xelatex
+\documentclass[UTF8,aspectratio=169,fontset=fandol]{ctexbeamer}
+
+\usepackage{theme/beamerthememetropolis}
+
+\usepackage{eso-pic}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+\title{AI智能体学习系列}
+\subtitle{中文 Beamer 模板}
+\author{作者姓名}
+\institute{重庆大学}
+\date{\today}
+
+\AddToShipoutPictureFG{%
+  \AtPageUpperLeft{%
+    \hspace*{\dimexpr\paperwidth-0.4cm\relax}%
+    \makebox[0pt][l]{%
+      \ifnum\value{framenumber}=0
+        \raisebox{-0.82cm}[0pt][0pt]{%
+          \makebox[0pt][r]{%
+          \includegraphics[height=0.55cm]{logo.png}%
+          }%
+        }%
+      \else
+        \raisebox{-0.82cm}[0pt][0pt]{%
+          \makebox[0pt][r]{%
+          \includegraphics[height=0.55cm]{logo_white.png}%
+          }%
+        }%
+      \fi
+    }%
+  }%
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{目录}
+  \tableofcontents
+\end{frame}
+
+\section{示例章节}
+
+\begin{frame}{中文内容示例}
+  \begin{itemize}
+    \item 支持中文标题、正文和列表。
+    \item 保持 mtheme/metropolis 默认排版风格。
+    \item 使用当前文件夹中的重庆大学 logo。
+  \end{itemize}
+\end{frame}
+
+\end{document}
